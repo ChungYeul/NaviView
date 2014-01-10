@@ -21,6 +21,7 @@
 		0014AA80187FD5D1004B650C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0014AA62187FD5D1004B650C /* UIKit.framework */; };
 		0014AA88187FD5D1004B650C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0014AA86187FD5D1004B650C /* InfoPlist.strings */; };
 		0014AA8A187FD5D1004B650C /* NaviViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014AA89187FD5D1004B650C /* NaviViewTests.m */; };
+		0014AA95187FD88F004B650C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014AA94187FD88F004B650C /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		0014AA85187FD5D1004B650C /* NaviViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NaviViewTests-Info.plist"; sourceTree = "<group>"; };
 		0014AA87187FD5D1004B650C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0014AA89187FD5D1004B650C /* NaviViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NaviViewTests.m; sourceTree = "<group>"; };
+		0014AA93187FD88F004B650C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0014AA94187FD88F004B650C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				0014AA70187FD5D1004B650C /* Main.storyboard */,
 				0014AA73187FD5D1004B650C /* ViewController.h */,
 				0014AA74187FD5D1004B650C /* ViewController.m */,
+				0014AA93187FD88F004B650C /* DetailViewController.h */,
+				0014AA94187FD88F004B650C /* DetailViewController.m */,
 				0014AA76187FD5D1004B650C /* Images.xcassets */,
 				0014AA65187FD5D1004B650C /* Supporting Files */,
 			);
@@ -252,6 +257,7 @@
 				0014AA75187FD5D1004B650C /* ViewController.m in Sources */,
 				0014AA6F187FD5D1004B650C /* AppDelegate.m in Sources */,
 				0014AA6B187FD5D1004B650C /* main.m in Sources */,
+				0014AA95187FD88F004B650C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

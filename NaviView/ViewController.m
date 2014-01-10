@@ -7,23 +7,49 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
+#import "DetailViewController.h"
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *table;
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    NSArray *data;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [data count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL_ID" forIndexPath:indexPath];
+    cell.textLabel.text = [data objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *detail = segue.destinationViewController;
+    UITableViewCell *selectedCell = (UITableViewCell *)sender;
+    NSIndexPath *selectedIndex = [self.table indexPathForCell:selectedCell];
+    detail.urlStr = [data objectAtIndex:selectedIndex.row];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.navigationBarHidden = NO;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    data = @[@"apple.com", @"google.co", @"daum.net", @"naver.com"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
